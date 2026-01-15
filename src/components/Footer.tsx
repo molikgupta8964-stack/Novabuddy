@@ -1,4 +1,5 @@
-import { Sparkles, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
+import novaBuddyLogo from "@/assets/novabuddy-logo.jpeg";
 
 const Footer = () => {
   return (
@@ -7,11 +8,13 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img 
+              src={novaBuddyLogo} 
+              alt="NovaBuddy Logo" 
+              className="h-10 w-auto object-contain"
+            />
             <span className="font-display font-bold text-lg gradient-text">
-              Personalized Learning Companion
+              NovaBuddy
             </span>
           </div>
 
@@ -41,7 +44,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 PLC Team. College Hackathon Project — Open Innovation Theme.
+            © 2024 NovaBuddy Team. College Hackathon Project — Open Innovation Theme.
           </p>
         </div>
       </div>

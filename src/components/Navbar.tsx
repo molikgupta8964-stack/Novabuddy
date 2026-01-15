@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import novaBuddyLogo from "@/assets/novabuddy-logo.jpeg";
 
 const navLinks = [
   { name: "Features", href: "#features" },
@@ -24,11 +25,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center glow-accent">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
+            <img 
+              src={novaBuddyLogo} 
+              alt="NovaBuddy Logo" 
+              className="h-10 md:h-12 w-auto object-contain"
+            />
             <span className="font-display font-bold text-lg md:text-xl gradient-text">
-              PLC
+              NovaBuddy
             </span>
           </a>
 

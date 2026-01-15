@@ -48,14 +48,14 @@ const Team = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
-            The Team
+            Founders of NovaBuddy
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Meet the <span className="gradient-text">Innovators</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A passionate team of developers, designers, and AI enthusiasts 
-            working to revolutionize education through Open Innovation.
+            building NovaBuddy to revolutionize education through Open Innovation.
           </p>
         </motion.div>
 
