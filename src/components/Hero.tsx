@@ -33,7 +33,7 @@ const Hero = () => {
           >
             <Sparkles className="w-4 h-4 text-accent" />
             <span className="text-sm font-medium text-muted-foreground">
-              Open Innovation Hackathon Project
+              AI-Powered Adaptive Learning
             </span>
           </motion.div>
 

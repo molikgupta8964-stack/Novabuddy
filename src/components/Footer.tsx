@@ -44,7 +44,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 NovaBuddy Team. College Hackathon Project — Open Innovation Theme.
+            © 2024 NovaBuddy. All rights reserved.
           </p>
         </div>
       </div>

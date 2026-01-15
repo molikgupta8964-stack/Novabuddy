@@ -110,29 +110,6 @@ const Team = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Hackathon Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-4 px-8 py-4 rounded-2xl glass-card border-primary/20">
-            <div className="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center">
-              <span className="text-xl">🏆</span>
-            </div>
-            <div className="text-left">
-              <p className="font-display font-semibold text-foreground">
-                College Hackathon 2024
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Theme: Open Innovation
-              </p>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
