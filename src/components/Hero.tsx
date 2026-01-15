@@ -44,9 +44,11 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6"
           >
-            Your Personal
+            <span className="gradient-text">NovaBuddy</span>
             <br />
-            <span className="gradient-text">Learning Companion</span>
+            <span className="text-foreground">Your Intelligent Personalized</span>
+            <br />
+            <span className="text-foreground">Learning Companion</span>
           </motion.h1>
 
           {/* Subtitle */}
