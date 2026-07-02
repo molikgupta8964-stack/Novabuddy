@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Marksheet - Examination Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #8B0000;">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.png" alt="Arya College Logo" style="height: 50px; width: auto; margin-right: 15px;">
+                <span>Examination Portal</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="fas fa-arrow-left me-1"></i>Back to Dashboard
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container-fluid" style="background-color: #f8f9fa; min-height: calc(100vh - 60px); py-5">
+        <div class="container py-5">
+            <!-- Marksheet Header -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                        <div>
+                            <h2 class="fw-bold" style="color: #1a1a4d;">Official Marksheet</h2>
+                            <p class="text-muted">B.Tech II Semester (After Revaluation)</p>
+                        </div>
+                        <div class="btn-group gap-2">
+                            <button class="btn btn-outline-primary" onclick="printMarksheet()">
+                                <i class="fas fa-print me-2"></i>Print
+                            </button>
+                            <button class="btn btn-outline-success" onclick="downloadMarksheetPDF()">
+                                <i class="fas fa-download me-2"></i>Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marksheet Content -->
+            <div class="row">
+                <div class="col-12">
+                    <div id="marksheetContent" class="marksheet-content" style="background: white; padding: 50px 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        
+                        <!-- Header with College Info -->
+                        <div class="text-center mb-5 pb-4" style="border-bottom: 3px solid #8B0000;">
+                            <div class="mb-3">
+                                <h3 style="color: #8B0000; font-weight: 700; margin: 0; letter-spacing: 1px;">ARYA COLLEGE OF ENGINEERING AND INFORMATION TECHNOLOGY</h3>
+                                <p style="margin: 8px 0; color: #1a1a4d; font-weight: 600; font-size: 1.05rem;">KUKAS, JAIPUR (RAJASTHAN)</p>
+                                <p style="margin: 3px 0; color: #666; font-size: 0.85rem;">(An Autonomous College Affiliated to RTU, Kota)</p>
+                            </div>
+                            <h5 style="color: #1a1a4d; margin-top: 20px; letter-spacing: 0.5px;">OFFICIAL MARKSHEET</h5>
+                            <p style="color: #8B0000; font-weight: 600; margin: 5px 0;">B.TECH. II SEMESTER (APRIL-MAY 2026)</p>
+                        </div>
+
+                        <!-- Student and QR Section -->
+                        <div class="row mb-5">
+                            <div class="col-md-3 text-center">
+                                <div style="border: 2px solid #ddd; padding: 40px 20px; margin-bottom: 10px; background-color: #f8f9fa;">
+                                    <div style="font-size: 3rem; color: #ccc; height: 120px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-user-circle"></i>
+                                    </div>
+                                </div>
+                                <p style="font-weight: 600; color: #666; font-size: 0.85rem;">Student Photo</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div style="padding: 20px; background-color: #f8f9fa; border-radius: 4px;">
+                                    <p class="mb-3"><strong>Roll Number:</strong> <span style="color: #1a1a4d;">25EARIT126</span></p>
+                                    <p class="mb-3"><strong>Enrollment Number:</strong> <span style="color: #1a1a4d;">25E1ARITM30P126</span></p>
+                                    <p class="mb-3"><strong>Student Name:</strong> <span style="color: #1a1a4d;">YOGYA SHARMA</span></p>
+                                    <p class="mb-3"><strong>Father's Name:</strong> <span style="color: #1a1a4d;">AMIT SHARMA</span></p>
+                                    <p class="mb-0"><strong>Branch/Program:</strong> <span style="color: #1a1a4d;">B.TECH - INFORMATION TECHNOLOGY</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div style="border: 2px solid #ddd; padding: 30px 20px; margin-bottom: 10px; background-color: #f8f9fa;">
+                                    <div style="font-size: 2.5rem; color: #ccc; height: 120px; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-qrcode"></i>
+                                    </div>
+                                </div>
+                                <p style="font-weight: 600; color: #666; font-size: 0.85rem;">QR Code</p>
+                            </div>
+                        </div>
+
+                        <!-- Subject Table -->
+                        <div class="mb-5">
+                            <h6 class="fw-bold mb-3" style="color: #1a1a4d;">SEMESTER RESULT SUMMARY</h6>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" style="border-color: #999;">
+                                    <thead style="background-color: #1a1a4d; color: white;">
+                                        <tr>
+                                            <th style="padding: 12px; text-align: center; font-weight: 600;">S.No.</th>
+                                            <th style="padding: 12px; text-align: left; font-weight: 600;">Course Code</th>
+                                            <th style="padding: 12px; text-align: left; font-weight: 600;">Course Title</th>
+                                            <th style="padding: 12px; text-align: center; font-weight: 600;">IA Marks</th>
+                                            <th style="padding: 12px; text-align: center; font-weight: 600;">ETE Marks</th>
+                                            <th style="padding: 12px; text-align: center; font-weight: 600;">Total</th>
+                                            <th style="padding: 12px; text-align: center; font-weight: 600;">Grade</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">1</td>
+                                            <td style="padding: 12px;">2FYBS-01</td>
+                                            <td style="padding: 12px;">Engineering Mathematics-II</td>
+                                            <td style="padding: 12px; text-align: center;">26</td>
+                                            <td style="padding: 12px; text-align: center;">11</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">37</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #fff3e0;"><strong>C</strong></td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 12px; text-align: center;">2</td>
+                                            <td style="padding: 12px;">2FYBS-02</td>
+                                            <td style="padding: 12px;">Engineering Physics</td>
+                                            <td style="padding: 12px; text-align: center;">28</td>
+                                            <td style="padding: 12px; text-align: center;">15</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">43</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #e8f5e9;"><strong>B</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">3</td>
+                                            <td style="padding: 12px;">2FYHS-04</td>
+                                            <td style="padding: 12px;">Communication Skills</td>
+                                            <td style="padding: 12px; text-align: center;">27</td>
+                                            <td style="padding: 12px; text-align: center;">27</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">54</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #fff3e0;"><strong>C</strong></td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 12px; text-align: center;">4</td>
+                                            <td style="padding: 12px;">2FYHS-06</td>
+                                            <td style="padding: 12px;">Introduction to Entrepreneurship Skills</td>
+                                            <td style="padding: 12px; text-align: center;">28</td>
+                                            <td style="padding: 12px; text-align: center;">56</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">84</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #bbdefb;"><strong>A++</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">5</td>
+                                            <td style="padding: 12px;">2FYES-08</td>
+                                            <td style="padding: 12px;">Basic Electrical Engineering</td>
+                                            <td style="padding: 12px; text-align: center;">27</td>
+                                            <td style="padding: 12px; text-align: center;">10</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">37</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #fff3e0;"><strong>C</strong></td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 12px; text-align: center;">6</td>
+                                            <td style="padding: 12px;">2FYES-10</td>
+                                            <td style="padding: 12px;">Programming in C++</td>
+                                            <td style="padding: 12px; text-align: center;">28</td>
+                                            <td style="padding: 12px; text-align: center;">21</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">49</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #fff3e0;"><strong>C</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">7</td>
+                                            <td style="padding: 12px;">2FYBS-20</td>
+                                            <td style="padding: 12px;">Engineering Physics Lab</td>
+                                            <td style="padding: 12px; text-align: center;">53</td>
+                                            <td style="padding: 12px; text-align: center;">35</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">88</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #bbdefb;"><strong>A++</strong></td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 12px; text-align: center;">8</td>
+                                            <td style="padding: 12px;">2FYES-26</td>
+                                            <td style="padding: 12px;">Basic Electrical Engineering Lab</td>
+                                            <td style="padding: 12px; text-align: center;">56</td>
+                                            <td style="padding: 12px; text-align: center;">35</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">91</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #c8e6c9;"><strong>O</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">9</td>
+                                            <td style="padding: 12px;">2FYES-29</td>
+                                            <td style="padding: 12px;">Computer Aided Machine Drawing</td>
+                                            <td style="padding: 12px; text-align: center;">49</td>
+                                            <td style="padding: 12px; text-align: center;">37</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">86</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #bbdefb;"><strong>A++</strong></td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 12px; text-align: center;">10</td>
+                                            <td style="padding: 12px;">2FYES-30</td>
+                                            <td style="padding: 12px;">Computer Programming Lab - II</td>
+                                            <td style="padding: 12px; text-align: center;">57</td>
+                                            <td style="padding: 12px; text-align: center;">36</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">93</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #c8e6c9;"><strong>O</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">11</td>
+                                            <td style="padding: 12px;">2FYHS-22</td>
+                                            <td style="padding: 12px;">Language Lab</td>
+                                            <td style="padding: 12px; text-align: center;">53</td>
+                                            <td style="padding: 12px; text-align: center;">34</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">87</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #bbdefb;"><strong>A++</strong></td>
+                                        </tr>
+                                        <tr style="background-color: #f8f9fa;">
+                                            <td style="padding: 12px; text-align: center;">12</td>
+                                            <td style="padding: 12px;">2FYHS-24</td>
+                                            <td style="padding: 12px;">Entrepreneurship Skills Lab</td>
+                                            <td style="padding: 12px; text-align: center;">56</td>
+                                            <td style="padding: 12px; text-align: center;">36</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">92</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #c8e6c9;"><strong>O</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 12px; text-align: center;">13</td>
+                                            <td style="padding: 12px;">2FYFC-02</td>
+                                            <td style="padding: 12px;">Foundation Course-Sports II</td>
+                                            <td style="padding: 12px; text-align: center;">94</td>
+                                            <td style="padding: 12px; text-align: center;">—</td>
+                                            <td style="padding: 12px; text-align: center; font-weight: 600;">94</td>
+                                            <td style="padding: 12px; text-align: center; background-color: #c8e6c9;"><strong>O</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Summary Section -->
+                        <div class="row mb-5">
+                            <div class="col-md-6 mb-3">
+                                <div style="padding: 15px; background-color: #f0f0f0; border-radius: 4px;">
+                                    <p class="mb-2"><strong>Grand Total Marks:</strong> <span style="font-weight: 700; color: #8B0000; font-size: 1.2rem;">1030</span></p>
+                                    <p class="mb-0"><strong>Overall Percentage:</strong> <span style="font-weight: 700; color: #8B0000; font-size: 1.2rem;">79.23%</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div style="padding: 15px; background-color: #f0f0f0; border-radius: 4px;">
+                                    <p class="mb-2"><strong>Result Status:</strong> <span style="font-weight: 700; color: #4CAF50; font-size: 1.2rem;">PASSED</span></p>
+                                    <p class="mb-0"><strong>Overall Grade:</strong> <span style="font-weight: 700; color: #8B0000; font-size: 1.2rem;">B+</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Signature Section -->
+                        <div class="row mt-5 pt-5" style="border-top: 2px solid #999;">
+                            <div class="col-md-4 text-center">
+                                <div style="margin-top: 30px; margin-bottom: 10px; min-height: 60px; border-top: 1px solid #000;">
+                                    <p class="small mt-2" style="color: #666;">Principal Signature</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div style="color: #999; margin-top: 15px;">
+                                    <p style="font-size: 0.85rem;">Date of Issue</p>
+                                    <p style="font-weight: 600; color: #1a1a4d;">June 15, 2026</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <div style="margin-top: 30px; margin-bottom: 10px; min-height: 60px; border-top: 1px solid #000;">
+                                    <p class="small mt-2" style="color: #666;">Controller of Examination</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Disclaimer -->
+                        <div class="alert alert-light border mt-4" style="border-color: #999; background-color: #f8f9fa;">
+                            <p class="mb-1" style="font-size: 0.85rem; color: #666;">
+                                <strong>Disclaimer:</strong> This is a digitally generated marksheet. The authentic marksheet as issued by the College shall be the valid official document. Students should preserve the original hard copy marksheet for future reference.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="row mt-4">
+                <div class="col-12 d-flex gap-2 justify-content-center flex-wrap">
+                    <button class="btn btn-primary" onclick="printMarksheet()">
+                        <i class="fas fa-print me-2"></i>Print Marksheet
+                    </button>
+                    <button class="btn btn-success" onclick="downloadMarksheetPDF()">
+                        <i class="fas fa-download me-2"></i>Download PDF
+                    </button>
+                    <a href="result.html" class="btn btn-info">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Result
+                    </a>
+                    <a href="dashboard.html" class="btn btn-secondary">
+                        <i class="fas fa-home me-2"></i>Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Check if user is logged in
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+
+        function printMarksheet() {
+            window.print();
+        }
+
+        function downloadMarksheetPDF() {
+            const element = document.getElementById('marksheetContent');
+            const opt = {
+                margin: 10,
+                filename: 'YOGYA_SHARMA_Marksheet.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+</body>
+</html>
