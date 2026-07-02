@@ -1,24 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NovaBuddy - Your Intelligent Personalized Learning Companion</title>
-    <meta name="description" content="NovaBuddy is an AI-powered tutor that adapts to your unique learning pace, style, and interests. Democratizing education for everyone." />
-    <meta name="author" content="NovaBuddy Team" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Portal - Arya College of Engineering & I.T.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #8B0000;">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.png" alt="Arya College Logo" style="height: 50px; width: auto; margin-right: 15px;">
+                <span>Examination Portal</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#notices">Notices</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#results">Results</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="NovaBuddy - Your Intelligent Personalized Learning Companion" />
-    <meta property="og:description" content="An AI-powered tutor that adapts to your unique learning pace, style, and interests. Democratizing education for everyone." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- College Header Banner -->
+    <div class="college-header-section" style="background-color: white; padding: 20px 0; border-bottom: 1px solid #e0e0e0;">
+        <div class="container">
+            <img src="assets/images/header-banner.png" alt="Arya College Header with Accreditations" style="width: 100%; height: auto; max-width: 100%;">
+        </div>
+    </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@NovaBuddyTeam" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Hero Banner -->
+    <section class="hero-banner text-white text-center py-5" style="background: linear-gradient(135deg, #8B0000 0%, #1a1a4d 100%); position: relative; overflow: hidden;">
+        <div class="container position-relative z-1">
+            <h1 class="display-4 fw-bold mb-3 fade-in">Examination Cell</h1>
+            <p class="lead mb-4 fade-in" style="animation-delay: 0.2s;">Arya College of Engineering & I.T., Jaipur</p>
+            <a href="login.html" class="btn btn-light btn-lg px-5 fade-in" style="animation-delay: 0.4s;">
+                <i class="fas fa-sign-in-alt me-2"></i>Student Login
+            </a>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Main Content -->
+    <div class="container-fluid" style="background-color: #f8f9fa;">
+        <!-- Notices Section -->
+        <section id="notices" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" style="color: #1a1a4d; font-family: 'Poppins', sans-serif; font-weight: 700;">
+                    <i class="fas fa-bell me-3" style="color: #8B0000;"></i>Latest Notices
+                </h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="notice-card">
+                            <div class="notice-header" style="background-color: #8B0000;">
+                                <i class="fas fa-calendar-alt"></i> Important
+                            </div>
+                            <div class="notice-body">
+                                <h5>End-Term Examination Schedule</h5>
+                                <p>B.Tech II Semester End-Term Examinations conducted from April-May 2026. Results are now available on student portal.</p>
+                                <small class="text-muted">Posted on: June 15, 2026</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="notice-card">
+                            <div class="notice-header" style="background-color: #8B0000;">
+                                <i class="fas fa-exclamation-triangle"></i> Notice
+                            </div>
+                            <div class="notice-body">
+                                <h5>Revaluation Process Open</h5>
+                                <p>Students can apply for revaluation and view answer books within 7 days of result declaration. Click on dashboard for details.</p>
+                                <small class="text-muted">Posted on: June 14, 2026</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="notice-card">
+                            <div class="notice-header" style="background-color: #8B0000;">
+                                <i class="fas fa-file-download"></i> Downloads
+                            </div>
+                            <div class="notice-body">
+                                <h5>Documentation Available</h5>
+                                <p>Examination guidelines, marking schemes, and result declaration policies are now available for download from your student dashboard.</p>
+                                <small class="text-muted">Posted on: June 10, 2026</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results" class="py-5" style="background-color: white;">
+            <div class="container">
+                <h2 class="text-center mb-5" style="color: #1a1a4d; font-family: 'Poppins', sans-serif; font-weight: 700;">
+                    <i class="fas fa-chart-line me-3" style="color: #8B0000;"></i>Latest Results
+                </h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <h5 class="mb-0">B.Tech II Semester</h5>
+                                <span class="badge bg-success">Released</span>
+                            </div>
+                            <div class="result-body">
+                                <p><strong>Examination:</strong> End-Term (Main) April-May 2026</p>
+                                <p><strong>Result Status:</strong> After Revaluation</p>
+                                <p><strong>Declaration Date:</strong> June 15, 2026</p>
+                                <a href="login.html" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-eye me-1"></i>View Result
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5" style="color: #1a1a4d; font-family: 'Poppins', sans-serif; font-weight: 700;">
+                    <i class="fas fa-link me-3" style="color: #8B0000;"></i>Quick Links
+                </h2>
+                <div class="row g-3">
+                    <div class="col-6 col-md-3">
+                        <a href="login.html" class="quick-link-card text-decoration-none">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <p>Student Login</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="quick-link-card text-decoration-none">
+                            <i class="fas fa-file-pdf"></i>
+                            <p>Exam Schedule</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="quick-link-card text-decoration-none">
+                            <i class="fas fa-book"></i>
+                            <p>Syllabus</p>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a href="#" class="quick-link-card text-decoration-none">
+                            <i class="fas fa-info-circle"></i>
+                            <p>FAQs</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3">About Examination Cell</h5>
+                    <p class="small">Arya College of Engineering & I.T. is an autonomous institution affiliated to RTU, Kota and approved by AICTE. Located in Kukas, Jaipur.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white-50">College Website</a></li>
+                        <li><a href="#" class="text-white-50">Student Services</a></li>
+                        <li><a href="#" class="text-white-50">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Contact</h5>
+                    <p class="small mb-1"><i class="fas fa-map-marker-alt"></i> Kukas, Jaipur, Rajasthan</p>
+                    <p class="small mb-1"><i class="fas fa-phone"></i> +91-XXXXXXXXXX</p>
+                    <p class="small"><i class="fas fa-envelope"></i> exam@aryacollege.org</p>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center small">
+                <p class="mb-0">&copy; 2026 Arya College of Engineering & I.T. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
 </html>
